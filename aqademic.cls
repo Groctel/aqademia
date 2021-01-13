@@ -252,7 +252,11 @@
 	% Set the document title for the header
 	\let\AqademiaTitleString\thetitle%
 
-	\date{\today}
+	\ifthenelse{\isundefined{\thedate}}
+	{
+		\date{\today}
+	}
+	{}
 }
 
 % ==============================================================================
